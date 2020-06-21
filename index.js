@@ -25,7 +25,6 @@ app.get('/', (request, response) => {
 
 app.get('/cipher', function(request, response) {
 
-  const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   let text = request.query.text;
   let shift = request.query.shift;
   let encryptedText;
@@ -33,6 +32,7 @@ app.get('/cipher', function(request, response) {
   // This is the cipher method:
 
     function caesarCipher(text, shift) {
+      const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
       let textArray = text.split("");
       let cryptArray = [];
       textArray.forEach(function(letter, index) {
@@ -57,12 +57,21 @@ app.get('/cipher', function(request, response) {
           cryptArray.push(letter);
         }
       });
-      // encryptedText = cryptArray.join("");
-      encryptedText = "waffle"
-      return encryptedText;
+      whateverArray = ["a", "b"]
+      return whateverArray;
+      // return [text, shift];
+      // return cryptArray;
+      // cryptString = cryptArray.join("");
+      // return `${cryptString} and pancakes`;
+      // encryptedText = "waffle"
+      // return encryptedText;
+
+      // return cryptArray.join("");
+      // return `text: ${text} and shift ${shift} and crypt array: ${cryptString}`
+      
     }
 
-  encryp
+  encryptedText = caesarCipher(text, shift);
 
   // Here ends the cipher method.
 
