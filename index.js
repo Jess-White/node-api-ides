@@ -66,7 +66,7 @@ function caesarCipher(lexicon, rubicon) {
 
   // Here ends the cipher function.
 
-  response.json(`This is the text: ${text} and this is the shift value: ${shift}, and this is the encrypted text: ${encryptedText}`);
+  response.json(`Your original text is "${text}," your shift value is ${shift}, and your encrypted text is "${encryptedText}"!`);
   
 });
 
